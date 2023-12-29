@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Inter:wght@200&family=Montserrat&family=Pixelify+Sans&family=Poppins:ital,wght@0,100;0,300;0,400;1,200&family=Roboto+Slab&family=Sono&family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+    <style>
+     
+     body{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+     }
+     h1,h2,h3,h4,h5,h6{
+        font-family: 'Poppins', sans-serif;
+     }
+     header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: red;
+        width: 100%;
+     }
+     header>div>a{
+        text-decoration: none;
+        color: black;
+     }
+     header>div,
+     footer>div{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        border-top: 2px solid black;
+        width: 80%;
+     }
+     footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+     main-body{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        
+        
+     }
+     main-body>div{
+        width: 500px;
+        height: 100%;
+        padding : 30px;
+        margin: 70px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        
+     }
+     main-body>div>button{
+        width: 150px;
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px;
+     }
+     
+     
+     
+
+
+        
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog App!</h1>
+        <p>Make a Post!</p>
+        <div>
+            <a href="/index.ejs"><h3>HOME</h3></a>
+            <a href="/post.ejs"><h3>POST</h3></a>
+            <a href="/edit.ejs"><h3>EDIT</h3></a>
+        </div>
+    </header>
+    <main-body>
+        
+        <% for(let i=0;i<N;i++){ %>
+            <div>
+                <h1><%= Heading[i] %></h1>
+                <div>
+                    <span></span>
+                    <p>Posted by <%= Name[i] %> </p>
+                    <span></span>
+                </div>
+                <h4 class="para"><%= Paragraph[i] %></h4>
+                
+
+               
+            </div>
+        <% }%>
+    </main-body>
+    <footer>
+        <h4> ©2023 BlogApp | Power is key </h4>
+        <div>
+            <h3>HOME</h3>
+            <h3>POST</h3>
+            <h3>EDIT</h3>
+        </div>
+    </footer>
+    <script>
+        
+
+    </script>
+</body>
+</html>
